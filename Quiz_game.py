@@ -21,10 +21,17 @@ for question in questions:
         print (option)
 
     guess = input("Enter (A, B, C, D): ").upper()
-    
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score +=1
+        print("Right answer :) ")
+    else:
+        print("Wrong answer :( ")
+
     question_num += 1
 print("------------------------")
 
+score = int(score / len(questions) * 100)
+print(f"Your score is {score}%")
 
-
-
+print("------------------------")
